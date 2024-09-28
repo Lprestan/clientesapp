@@ -2,7 +2,7 @@
     <div class="row">
         <!--menu-->
         <div class="col-md-4 p-2">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg bg-primary-subtle">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Clientes App</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -17,8 +17,8 @@
                                     Menú Principal
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Nuevo Cliente</a></li>
-                                    <li><a class="dropdown-item" href="#">Listado de Clientes</a></li>
+                                    <li><a class="dropdown-item" href="#" [routerLink]="['/nuevocliente']" routerLinkActive="router-link-active" >Nuevo Cliente</a></li>
+                                    <li><a class="dropdown-item" href="#" [routerLink]="['/listadoclientes']" routerLinkActive="router-link-active" >Listado de Clientes</a></li>
                                 </ul>
                             </li>
                         </div>
