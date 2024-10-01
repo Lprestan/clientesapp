@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-listadoclientes',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './listadoclientes.component.css'
 })
 export class ListadoclientesComponent {
+
+  clientes:any[]=[];
+  
+  constructor(private clienteservice:ClienteService){}
+
+  ngOnInit(): void {
+    this.clientes=this.clienteservice.clientes;   
+  }
+
+
+  
 
 }

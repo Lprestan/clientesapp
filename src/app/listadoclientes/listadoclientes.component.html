@@ -11,13 +11,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+            <tr *ngFor="let cliente of clientes; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{cliente.idCliente}}</td>
+                <td>{{cliente.nombreCliente}}</td>
+                <td>{{cliente.telefonoCliente}}</td>
+                <td>{{cliente.correoCliente}}</td>
+                <td>
+                    <a href="#" class="btn btn-warning btn-sm" [routerLink]="['/editarcliente',i]" routerLinkActive="router-link-active" >edit</a> | 
+                    <button class="btn btn-sm btn-danger">Delet</button>
+                </td>
             </tr>
         </tbody>
     </table>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-editarcliente',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './editarcliente.component.css'
 })
 export class EditarclienteComponent {
+
+  constructor(private rutaactiva:ActivatedRoute){
+    console.log(rutaactiva.snapshot.paramMap.get('id'));
+  }
+
+  obtenerId(){}
 
 }

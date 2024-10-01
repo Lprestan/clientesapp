@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:'',component:NuevoclienteComponent},
   {path:'nuevocliente',component:NuevoclienteComponent},
   {path:'listadoclientes',component:ListadoclientesComponent},
-  {path:'editarcliente/id',component:EditarclienteComponent}
+  {path:'editarcliente/:id',component:EditarclienteComponent}
 ];
 
 @NgModule({
