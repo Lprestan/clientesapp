@@ -19,7 +19,7 @@
                 <td>{{cliente.correoCliente}}</td>
                 <td>
                     <a href="#" class="btn btn-warning btn-sm" [routerLink]="['/editarcliente',i]" routerLinkActive="router-link-active" >edit</a> | 
-                    <button class="btn btn-sm btn-danger">Delet</button>
+                    <button class="btn btn-sm btn-danger" (click)="Eliminar(i)">Delet</button>
                 </td>
             </tr>
         </tbody>

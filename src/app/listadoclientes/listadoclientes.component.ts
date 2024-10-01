@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ClienteService } from '../cliente.service';
+import { Cliente } from '../models/cliente.model';
 
 @Component({
   selector: 'app-listadoclientes',
@@ -8,7 +9,7 @@ import { ClienteService } from '../cliente.service';
 })
 export class ListadoclientesComponent {
 
-  clientes:any[]=[];
+  clientes:Cliente[]=[];
   
   constructor(private clienteservice:ClienteService){}
 
@@ -16,7 +17,9 @@ export class ListadoclientesComponent {
     this.clientes=this.clienteservice.clientes;   
   }
 
-
+  Eliminar(i:any){
+    this.clienteservice.EliminarCliente(i);
+  }
   
 
 }

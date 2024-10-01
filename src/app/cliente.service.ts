@@ -13,7 +13,14 @@ export class ClienteService {
   Agrear(nuevocliente:Cliente){
     this.clientes.push(nuevocliente);
     console.log(this.clientes);
-    
+  }
+
+  EditarCliente(id:any,clienteeditado:any){
+    this.clientes.splice(id,1,clienteeditado);
+  }
+
+  EliminarCliente(id:any){
+    this.clientes.splice(id,1);
   }
 
 

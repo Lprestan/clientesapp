@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class NuevoclienteComponent {
 
-  idCliente:number;
+  idCliente:string;
   nombreCliente:string;
   telefonoCliente:string;
   correoCliente:string;
